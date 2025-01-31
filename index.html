@@ -56,6 +56,35 @@
           url("./vegetable-offer.png");
         background-repeat: no-repeat;
         background-position: center;
+        background-size: contain;
+        margin-top: 10px;
+        height: 100%;
+        width: 100%;
+      }
+      .body1 {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+      }
+
+      .loading-spinner {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
       }
     </style>
   </head>
@@ -159,6 +188,12 @@
         </div>
       </div>
     </header>
+
+    <section>
+      <div class="body1">
+        <div class="loading-spinner"></div>
+      </div>
+    </section>
     <main>
       <section>
         <div class="md:mx-10">
@@ -611,7 +646,7 @@
 
         <div class="relative">
           <div
-            class="flex relative top-12 gap-5 p-3 justify-evenly rounded-2xl items-center mx-5 bg-gray-200"
+            class="flex relative top-20 gap-5 p-3 justify-evenly rounded-2xl items-center mx-5 bg-gray-200"
           >
             <!-- image section -->
             <div>
